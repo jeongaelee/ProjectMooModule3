@@ -22,7 +22,7 @@
 
 ## 실습 순서
 
-* [Azure API Management를 통하여 Azure OpenAI 액세스 하기](https://github.com/jeongaelee/ProjectMooModule1/blob/main/Step1.md)
+* [Azure API Management를 통하여 Azure OpenAI 액세스 하기](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step1.md)
 
 ## 참고 및 인용된 Repository
 
