@@ -1,16 +1,16 @@
-# Azure API Management를 통하여 Azure OpenAI 액세스 하기
+# Step 1. Azure API Management를 통하여 Azure OpenAI 액세스 하기
 
 본 실습 단계에서는 Azure OpenAI(aka. AOAI)와 Azure API Management(aka. APIM) 리소스를 생성하고, Azure API Management에 Azure OpenAI의 API를 Import하여 APIM의 Gateway를 통하여 AOAI의 Chat Completion API를 호출해봅니다.
 
 ## Azure 리소스 생성
 
-### Azure OpenAI 리소스 생성
+### Azure OpenAI 리소스 생성 및 모델 배포
 
 1. [Azure Portal](https://portal.azure.com/)으로 접속하여 새 리소스 만들기를 합니다. azure openai로 검색하여 Azure OpenAI 리소스를 생성합니다.
 
     <img src="images/1-01.png" width="300"/>
 
-2. Resource group을 새로 만들고, Region은 West US로 선택하고, 이름과 가격 티어를 입력한 후 Next를 누르고 나머지 항목은 기본값으로 유지한 후 Azure OpenAI 리소스를 생성합니다.
+2. Resource group을 새로 만들고, Region은 West US로 선택하고, 이름과 가격 티어를 입력한 후 Next를 누르고 나머지 항목은 기본값으로 유지한 후 Azure OpenAI 리소스를 생성합니다. 이름은 aoai-nov26-instance1으로 입력합니다.
 
     <img src="images/1-02.png" width="600"/>
 
@@ -152,4 +152,5 @@
 ## 실습 순서
 
 * [Azure API Management를 통하여 Azure OpenAI 액세스 하기](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step1.md)
-* [Token rate limiting](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step2.md)
+* [Azure API Management로 Token rate limiting](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step2.md)
+* [Azure API Management의 Backend Load Balancing](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step3.md)
