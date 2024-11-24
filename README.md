@@ -17,12 +17,12 @@
 
 * Azure OpenAI
 * Azure API Management
-* Azure AI Search
-* Azure Storage Account
 
 ## 실습 순서
 
 * [Azure API Management를 통하여 Azure OpenAI 액세스 하기](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step1.md)
+* [Azure API Management로 Token rate limiting](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step2.md)
+* [Azure API Management의 Backend Load Balancing](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step3.md)
 
 ## 참고 및 인용된 Repository
 
