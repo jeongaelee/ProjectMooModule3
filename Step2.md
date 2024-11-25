@@ -22,7 +22,7 @@
 1. 아래의 Github repository를 다운로드 하거나 Git Clone 합니다.
 
     ```
-    git clone XXX
+    git clone https://github.com/jeongaelee/projectmoo3code
     ```
 
 2. 다운로드 받은 소스 코드를 Visual Studio Code에서 오픈합니다.
