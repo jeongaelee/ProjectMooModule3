@@ -1,6 +1,6 @@
-# Step4. HTTP Header로 Backend를 선택하여 Azure OpenAI On Your Data를 적용한 Azure OpenAI 서비스 호출
+# Step4. HTTP Header 값으로 Backend를 선택하여 Azure OpenAI On Your Data를 적용한 Azure OpenAI 서비스 호출
 
-본 실습에서는 API Management의 Backend로 두개의 Azure OpenAI를 설정하고, HTTP Header에 따라 호출할 Backend를 분기합니다. 하나의 Azure OpenAI Backend에는 On Your Data를 적용하여 내가 업로드한 파일에서 쿼리에 대한 응답을 받고, 다른 하나의 Azure OpenAI Backend에서는 일반적인 모델의 응답을 받는 로직을 구현해본다.
+본 실습에서는 API Management의 Backend로 두개의 Azure OpenAI를 설정하고, HTTP Header에 따라 호출할 Backend를 분기합니다. 하나의 Azure OpenAI Backend에는 On Your Data를 적용하여 내가 업로드한 파일에서 쿼리에 대한 응답을 받고, 다른 하나의 Azure OpenAI Backend에서는 일반적인 모델의 응답을 받는 로직을 구현해 봅니다.
 
 ## Azure Storage Account 생성
 
