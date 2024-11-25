@@ -1,4 +1,4 @@
-# ProjectMoo Module3 - Code Repository
+# ProjectMoo Module3 - 실습 가이드
 
 ## Hands-on Lab 개요
 
