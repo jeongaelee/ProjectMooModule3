@@ -22,7 +22,7 @@
 1. 아래의 Github repository를 다운로드 하거나 Git Clone 합니다.
 
     ```
-    git clone https://github.com/jeongaelee/projectmoo3code
+    git clone XXX
     ```
 
 2. 다운로드 받은 소스 코드를 Visual Studio Code에서 오픈합니다.
@@ -35,5 +35,7 @@
 
 ## 실습 순서
 
-* [Azure API Management를 통하여 Azure OpenAI 액세스 하기](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step1.md)
-* [Token rate limiting](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step2.md)
+* [Step1. Azure API Management를 통하여 Azure OpenAI 액세스 하기](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step1.md)
+* [Step2. Azure API Management로 Token rate limiting](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step2.md)
+* [Step3. Azure API Management의 Backend Load Balancing](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step3.md)
+* [Step4. HTTP Header로 Backend를 선택하여 Azure OpenAI On Your Data를 적용한 Azure OpenAI 서비스 호출](https://github.com/jeongaelee/ProjectMooModule3/blob/main/Step4.md)

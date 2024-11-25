@@ -8,13 +8,19 @@
 
 1. Step 1의 Azure OpenAI 리소스 생성 및 모델 배포 과정을 한번 더 수행하여 동일할 리소스 그룹에 Azure OpenAI 리소스를 하나 더 생성합니다. Azure OpenAI 리소스 이름은 "aoai-nov26-instance2"으로 입력합니다.
 
-## Azure OpenAI에 role assignment 추가하기
+## Azure API Management의 System Assigned Managed Identity 켜기
+
+1. Azure API Management의 Managed Identity 메뉴에서 System assigned의 status를 "On"으로 설정합니다.
+
+    <img src="images/3-00.png" width="500"/>
 
 [Azure API Management를 사용하여 Azure OpenAI API에 대한 액세스 인증 및 권한 부여](https://learn.microsoft.com/ko-kr/azure/api-management/api-management-authenticate-authorize-azure-openai)하는 방법에는 이전 단계에서 사용한 API 요청에 API 키를 전달하는 방법이외에 Managed Identity (관리 ID)를 사용하여 인증, ID 공급자를 사용한 OAuth 2.0 권한 부여 방법등이 있습니다.
 
 본 과정은 Azure OpenAI 인스턴스를 두개 이상 호출하는 로드발란싱 기능을 실습하기 위하여, Azure API Management Gateway에서 Azure OpenAI를 액세스하는 인증으로 "Managed Identity"를 사용합니다. 아래 과정을 통하여 이전 단계에서 생성한 Azure OpenAI Instance1과 위에서 생성한 추가 Instance2에 Managed Identity로 액세스 하는 방법을 설정합니다.
 
-*이 단계는 Azure OpenAI Instance1과 Instance2에 모두 적용합니다.
+*아래의 단계는 Azure OpenAI Instance1과 Instance2에 모두 적용합니다.
+
+## Azure OpenAI에 role assignment 추가하기
 
 1. Azure OpenAI 리소스로 이동하여 "Access control (IAM)" 메뉴에서 "Add role assignment" 버튼을 클릭합니다.
 
@@ -32,7 +38,7 @@
 
     <img src="images/3-04.png" width="700"/>
 
-*위의 1~4 과정을 Instance2에도 적용합니다.
+*위의 1~4 과정을 Azure OpenAI Instance2에도 적용합니다.
 
 5. 이제 API Management 리소스로 이동합니다. "Security" 메뉴 아래의 "Managed identities"를 클릭합니다. Permissions 아래의 "Azure role assignments" 버튼을 선택합니다.
 
