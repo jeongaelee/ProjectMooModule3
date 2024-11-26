@@ -48,6 +48,10 @@
 
     <img src="images/3-06.png" width="700"/>
 
+## API Management에 Instance2 Backend 추가
+
+1. API Management의 Backends 메뉴에서 "openai-instance2"를 추가합니다.
+
 ## API Management에 Instance2 Backend와 Backend Pool 추가
 
 [API Management의 Backend](https://learn.microsoft.com/en-us/azure/api-management/backends?tabs=bicep)에는 Circuit breaker와 Load-balanced pool 기능이 제공됩니다. 본 실습에서는 Load Balancing 기능을 구현해 봅니다. API Management는 backend pool을 지원하여 API가 다수의 backends를 호출할때 backend 사이의 loac-balance를 해줄 수 있습니다.
