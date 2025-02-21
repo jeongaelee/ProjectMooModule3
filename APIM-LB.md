@@ -79,6 +79,8 @@
 
 [Azure API Management를 사용하여 Azure OpenAI API에 대한 액세스 인증 및 권한 부여](https://learn.microsoft.com/ko-kr/azure/api-management/api-management-authenticate-authorize-azure-openai)하는 방법에는 API 요청에 API 키를 전달하는 방법, Managed Identity (관리 ID)를 사용하여 인증, ID 공급자를 사용한 OAuth 2.0 권한 부여 방법등이 있습니다.
 
+Azure Managed Identity는 Azure 리소스가 Microsoft Entra ID(이전의 Azure Active Directory)를 통해 인증할 수 있도록 합니다.
+
 본 과정은 Azure OpenAI 인스턴스를 두개 이상 호출하는 로드발란싱 기능을 실습하기 위하여, Azure API Management Gateway에서 Azure OpenAI를 액세스하는 인증으로 "Managed Identity"를 사용합니다. 아래 과정을 통하여 Azure OpenAI Instance1과 Instance2에 Managed Identity로 액세스 하는 방법을 설정합니다.
 
 *아래의 단계는 Azure OpenAI Instance1과 Instance2에 모두 적용합니다.
