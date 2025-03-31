@@ -132,7 +132,17 @@ API Management는 아래의 load balancing 옵션을 지원합니다.
 
 * Note: 현재 기준으로 Backend Pool은 REST API, Bicep, ARM template으로 구성할 수 있습니다. (Azure Portal에서 아직 기능이 제공되지 않음) 본 실습에서는 Bicep 템플릿으로 Backend Pool을 구성하는 것을 실습해 보도록 하겠습니다.
 
-1. 이 단계에서는 backend-pool을 구성성합니다. Step2에서 다운로드 받은 코드에서 backend-pool-load-balancing 폴더의 backend-pool.bicep 파일을 오픈합니다.
+1. 아래의 Github repository를 다운로드 하거나 Git Clone 합니다.
+
+    ```
+    git clone https://github.com/jeongaelee/projectmoo3code.git
+    ```
+
+2. 다운로드 받은 소스 코드를 Visual Studio Code에서 오픈합니다.
+
+    <img src="images/2-03.png" width="300"/>
+    
+3. 이 단계에서는 backend-pool을 구성성합니다. Step2에서 다운로드 받은 코드에서 backend-pool-load-balancing 폴더의 backend-pool.bicep 파일을 오픈합니다.
 
     <img src="images/3-07.png" width="300"/>
 
@@ -176,23 +186,23 @@ Notes:
 - Priority와 weight 기반의 라우팅도 지원합니다. `openai_resources`의 `priority` (the lower the number, the higher the priority)와 `weight` 파라미터 변수를 변경하면 됩니다.
 - 위의 설정에서는 weight 값을 다르게 하여 1번과 2번의 Azure OpenAI 인스턴스의 호출 빈도를 조정하였습니다.
 
-2. Visual Studio Code에서 backend-pool-load-balancing.ipynb 파일을 오픈하여 아래 단계에 있는 bicep 실행 코드를 실행합니다.
+4. Visual Studio Code에서 backend-pool-load-balancing.ipynb 파일을 오픈하여 아래 단계에 있는 bicep 실행 코드를 실행합니다.
 
     <img src="images/3-09.png" width="700"/>
 
-3. Azure Portal의 API Management의 Backends 메뉴에서 Backend가 모두 정상적으로 등록되었는지 확인합니다.
+5. Azure Portal의 API Management의 Backends 메뉴에서 Backend가 모두 정상적으로 등록되었는지 확인합니다.
 
     <img src="images/3-08.png" width="800"/>
 
-4. API를 추가하여 Backend Pool을 연결해 봅니다. 이번에는 이전에 만들었던 Azure OpenAI Service API를 Clone하여 새로운 만들어 보도록 하겠습니다. 
+6. API를 추가하여 Backend Pool을 연결해 봅니다. 이번에는 이전에 만들었던 Azure OpenAI Service API를 Clone하여 새로운 만들어 보도록 하겠습니다. 
 
     <img src="images/3-10.png" width="500"/>
 
-5. Clone한 API의 "Settings" 메뉴에서 Display name과 API URL suffix를 적절하게 변경합니다.
+7. Clone한 API의 "Settings" 메뉴에서 Display name과 API URL suffix를 적절하게 변경합니다.
 
     <img src="images/3-11.png" width="500"/>
 
-6. Design의 Inbound Policy에서 위에서 추가한 backend pool을 설정합니다.
+8. Design의 Inbound Policy에서 위에서 추가한 backend pool을 설정합니다.
 
     <img src="images/3-12.png" width="800"/>
 
@@ -231,9 +241,9 @@ Notes:
     </policies>
     ```
 
-7. Visual Studio의 backend-pool-load-balancing.ipynb 코드로 이동하여 "🧪 직접 HTTP를 호출하여 API 테스트"를 실행합니다. 코드 실행 전 변수를 테스트 중인 Azure 리소스에 맞게 수정한 후 실행합니다.
+9. Visual Studio의 backend-pool-load-balancing.ipynb 코드로 이동하여 "🧪 직접 HTTP를 호출하여 API 테스트"를 실행합니다. 코드 실행 전 변수를 테스트 중인 Azure 리소스에 맞게 수정한 후 실행합니다.
 
-8. 마지막으로 "🔍 Load Balancing 결과 분석"을 실행하여 West US의 Azure OpenAI와 East US의 Azure OpenAI 리소스가 Weight에 맞게 (3:1) 호출되었는지 결과를 확인합니다.
+10. 마지막으로 "🔍 Load Balancing 결과 분석"을 실행하여 West US의 Azure OpenAI와 East US의 Azure OpenAI 리소스가 Weight에 맞게 (3:1) 호출되었는지 결과를 확인합니다.
 
 ## 실습 순서
 
