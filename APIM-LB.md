@@ -32,9 +32,9 @@
 
 ## Load Balancing을 위한 추가 Azure OpenAI 리소스 생성
 
-1. 위의 Azure OpenAI 리소스 생성 및 모델 배포 과정을 한번 더 수행하여 동일할 리소스 그룹에 Azure OpenAI 리소스를 하나 더 생성합니다. Azure OpenAI 리소스 이름은 "aoai-nov26-instance2"으로 입력합니다.
+1. 위의 Azure OpenAI 리소스 생성 및 모델 배포 과정을 한번 더 수행하여 동일할 리소스 그룹에 Azure OpenAI 리소스를 하나 더 생성합니다. Azure OpenAI 리소스 이름은 "aoai-nov26-instance2"으로 입력합니다. 로드밸런싱이 정상적으로 동작하는 것을 확인하기 위하여 두 Azure OpenAI 리소스의 Region을 다르게 선택합니다. aoai-nov26-instance2의 지역은 aoai-nov26-instance1과 다르게 East US로 선택합니다.
 
-2. 두번째 생성된 "aoai-nov26-instance1"에 위의 #4~6과정과 동일하게 gpt-4o 모델을 배포합니다.
+2. 두번째 생성된 "aoai-nov26-instance2"에 위의 #4~6과정과 동일하게 gpt-4o 모델을 배포합니다.
 
 ### Azure API Management 리소스 생성
 
