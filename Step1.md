@@ -89,7 +89,7 @@
 
     <img src="images/1-16.png" width="600"/>
 
-        '''
+    ```
         <policies>
             <inbound>
                 <base />
@@ -108,7 +108,7 @@
                 <base />
             </on-error>
         </policies>
-        '''
+    ```
 
 18. 이제 api-key, Backend, API Policy에 대한 설정이 모두 완료되었습니다. Azure API Management의 Gateway를 통하여 Azure OpenAI Endpoint를 호출하여 Chat Completion에 대한 응답을 받아올 수 있는지 테스트 합니다. Test 탭에서 첫번째 API인 "Creates a completion for the chat message"를 선택합니다. 'deployment-id"에는 Azure OpenAI에서 배포한 Model의 이름을 넣습니다. (참고:위의 단계에서는 "gpt-4o"를 배포하였습니다.) api-version은 OpenAPI 스펙의 버전을 입력합니다. (참고: 위의 단계에서는 "2024-02-01"의 inference.json을 사용 하였습니다.
 
@@ -118,7 +118,7 @@
 
     <img src="images/1-18.png" width="700"/>
 
-        '''
+    ```
         {
         "messages": [
             {
@@ -144,7 +144,8 @@
         "top_p": 0.95,
         "max_tokens": 800
         }
-    '''
+    ```
+
 20. Http response에 "HTTP/1.1 200 OK" 응답과 함께 프롬프트에 대한 답변이 정상적으로 출력되면, Azure API Management Gateway를 통하여 성공적으로 Azure OpenAI의 API를 호출한 것입니다.
 
     <img src="images/1-19.png" width="700"/>
