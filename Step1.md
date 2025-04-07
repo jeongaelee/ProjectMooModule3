@@ -64,7 +64,7 @@
 
 14. Azure OpenAI REST API의 OpenAPI 스펙의 [2024-02-01 GA version](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2024-02-01/inference.json)을 다운로드합니다. 다운로드 받은 inference.json 파일의 "servers" 아래 "url"과 "endpoint"의 "default"를 Azure OpenAI의 EndPoint로 변경합니다.
 
-        ```
+    ```
         "servers": [
             {
             "url": "https://{your-aoai-name}.openai.azure.com/openai",
@@ -75,7 +75,7 @@
             }
             }
         ],
-        ```
+    ```
 
 15. 아래의 화면에서 inference.json 파일을 업로드하고, Display name, Name, API URL suffix를 입력하여 생성합니다.
 
