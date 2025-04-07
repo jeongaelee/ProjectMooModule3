@@ -151,8 +151,8 @@ API Management는 아래의 load balancing 옵션을 지원합니다.
 * {your-api-name}: API Management의 이름
 * {your-subscription-id}: Subscription ID (구독 ID)
 * {your-resource-group-name}: 리소스 그룹 명
-* {your-open-ai-1}: Azure OpenAI 1번 리소스 (예: openai-instance1)
-* {your-open-ai-2}: Azure OpenAI 2번 리소스 (예: openai-instance2)
+* {your-open-ai-1}: Azure OpenAI 1번 리소스의 Backend (예: openai-instance1)
+* {your-open-ai-2}: Azure OpenAI 2번 리소스의 Backend (예: openai-instance2)
 
     ```
     @description('The description of the OpenAI backend pool')
@@ -190,19 +190,11 @@ Notes:
 
     <img src="images/3-09.png" width="700"/>
 
-5. Azure Portal의 API Management의 Backends 메뉴에서 Backend가 모두 정상적으로 등록되었는지 확인합니다.
+5. Azure Portal의 API Management의 Backends 메뉴의 Load Balancer 탭에서 Backend와 Backend Pool이 모두 정상적으로 등록되었는지 확인합니다.
 
     <img src="images/3-08.png" width="800"/>
 
-6. API를 추가하여 Backend Pool을 연결해 봅니다. 이번에는 이전에 만들었던 Azure OpenAI Service API를 Clone하여 새로운 만들어 보도록 하겠습니다. 
-
-    <img src="images/3-10.png" width="500"/>
-
-7. Clone한 API의 "Settings" 메뉴에서 Display name과 API URL suffix를 적절하게 변경합니다.
-
-    <img src="images/3-11.png" width="500"/>
-
-8. Design의 Inbound Policy에서 위에서 추가한 backend pool을 설정합니다.
+6. Design의 Inbound Policy에서 위에서 추가한 backend pool을 설정합니다.
 
     <img src="images/3-12.png" width="800"/>
 
@@ -241,9 +233,9 @@ Notes:
     </policies>
     ```
 
-9. Visual Studio의 backend-pool-load-balancing.ipynb 코드로 이동하여 "🧪 직접 HTTP를 호출하여 API 테스트"를 실행합니다. 코드 실행 전 변수를 테스트 중인 Azure 리소스에 맞게 수정한 후 실행합니다.
+7. Visual Studio의 backend-pool-load-balancing.ipynb 코드로 이동하여 "🧪 직접 HTTP를 호출하여 API 테스트"를 실행합니다. 코드 실행 전 변수를 테스트 중인 Azure 리소스에 맞게 수정한 후 실행합니다.
 
-10. 마지막으로 "🔍 Load Balancing 결과 분석"을 실행하여 West US의 Azure OpenAI와 East US의 Azure OpenAI 리소스가 Weight에 맞게 (3:1) 호출되었는지 결과를 확인합니다.
+8. 마지막으로 "🔍 Load Balancing 결과 분석"을 실행하여 West US의 Azure OpenAI와 East US의 Azure OpenAI 리소스가 Weight에 맞게 (3:1) 호출되었는지 결과를 확인합니다.
 
 ## 실습 순서
 
